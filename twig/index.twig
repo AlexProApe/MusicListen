@@ -1,0 +1,50 @@
+{% extends 'page.twig' %}
+
+{% block navigation %}
+{% endblock navigation %}
+
+{% block header %}
+        <div class="span12">
+	    <h1 class="cntr">Header</h1>
+        </div>
+{% endblock header %}
+
+{% block main %}
+    <div class="row">
+        <div class="span2">
+            <p>Left</p>
+        </div>
+        <div class="span8">
+	    <form class="well form-vertical">
+		<fieldset>
+		    <legend>Data</legend>
+		    <div class="control-group">
+			<label>Label name</label>
+			<div class="controls">
+			    <input type="text" class="span3" placeholder="Type something">
+			</div>
+		    </div>
+		    <div class="control-group">
+			<div class="controls">
+			    <label class="checkbox">
+			    <input type="checkbox"> Check me out
+			    </label>
+			</div>
+		    </div>
+		</fieldset>
+		<div class="form-actions">
+		    <input type="submit" class="btn btn-primary" value="Submit"/>
+		</div>
+	    </form>
+        </div>
+        <div id="rightbar" class="span2">
+	    <p>Right</p>
+	</div>
+    </div>
+{% endblock main %}
+
+{% block footer %}
+    <div class="span12">
+        <p class="cntr">Footer</p>
+    <div>
+{% endblock footer %}
