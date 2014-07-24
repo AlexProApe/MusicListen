@@ -1,0 +1,35 @@
+
+{%extends "header.twig"%}
+
+    {%block header%}
+	<title>login</title>
+    {%endblock header%}
+
+
+{%block main%}
+<div class="wrapper-login">
+	<div class="container">
+		<div class="row">
+			<div class="login-content span4 offset4">
+				<div class="header-login well">
+					<h3>Login</h3>
+				</div>
+				<form class="well" name="login" id="login" method="post" action="deallogin.php">
+					<label>Username</label>
+					<input id="username" name="username"type="text" class="input" placeholder="Type your username..">
+					<label>Password</label>
+					<input id="password"name="password"type="password" class="input" placeholder="Type your password..">
+
+					<label class="checkbox">
+				    	<input type="checkbox"> Check me out
+					</label>
+				  	<input type="submit" class="btn btn-info"value="Submit">
+				  	
+				</form>	
+			</div>
+		<div>
+	</div>
+</div>
+
+{%endblock main%}
+

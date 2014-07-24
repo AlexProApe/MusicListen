@@ -1,0 +1,390 @@
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>The World of Music</title>
+    
+    <script src="assets/js/jquery.js">
+    </script>
+    <script src="assets/js/bootstrap.js">
+    </script>
+    
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+ 
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+    </style>
+    
+    <script type="text/javascript">
+     function check(){
+	var str = document.getElementById("name").value;
+        var str1 = document.getElementById("url").value;
+        var str2 = document.getElementById("images").value;
+        var str3 = document.getElementById("singer").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("jazzb").disabled = true;}
+	else{document.getElementById("jazzb").disabled = false;}
+      }  
+      function bcheck(){
+	var str = document.getElementById("bname").value;
+        var str1 = document.getElementById("burl").value;
+        var str2 = document.getElementById("bimages").value;
+        var str3 = document.getElementById("bsinger").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("bluesb").disabled = true;}
+	else{document.getElementById("bluesb").disabled = false;}
+      } 
+      
+      function ccheck(){
+	var str = document.getElementById("cname").value;
+        var str1 = document.getElementById("curl").value;
+        var str2 = document.getElementById("cimages").value;
+        var str3 = document.getElementById("csinger").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("cb").disabled = true;}
+	else{document.getElementById("cb").disabled = false;}
+      } 
+       function cocheck(){
+	var str = document.getElementById("coname").value;
+        var str1 = document.getElementById("courl").value;
+        var str2 = document.getElementById("coimages").value;
+        var str3 = document.getElementById("cosinger").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("cob").disabled = true;}
+	else{document.getElementById("cob").disabled = false;}
+      } 
+       function rcheck(){
+	var str = document.getElementById("rname").value;
+        var str1 = document.getElementById("rurl").value;
+        var str2 = document.getElementById("rimages").value;
+        var str3 = document.getElementById("rsinger").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("rb").disabled = true;}
+	else{document.getElementById("rb").disabled = false;}
+      } 
+        function pcheck(){
+	var str = document.getElementById("pname").value;
+        var str1 = document.getElementById("purl").value;
+        var str2 = document.getElementById("pimages").value;
+        var str3 = document.getElementById("psinger").value;
+	if(str == ""||str1==""||str2==""||str3==""){document.getElementById("pb").disabled = true;}
+	else{document.getElementById("pb").disabled = false;}
+      }  
+   </script>
+        
+    
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">
+            ALL About Music
+          </a>
+          <div class="nav-collapse">
+		<ul class="nav pull-right">
+              		<li><a href="index.php">Home</a></li>
+                        <li><a href="jazz.php">Jazz</a></li>
+              		<li><a href="blues.html">Blues</a></li>
+              		<li><a href="classic.html">Clasic</a></li>
+              		<li><a href="contry.html">Country</a></li>
+              		<li><a href="pop.html">Pop</a></li>
+		        <li><a href="rock.html">Rock</a></li>
+		        <li class="divider-vertical"></li>
+		        
+            	</ul>
+	</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-unit">
+        <div>
+          <h1 style="text-align: center;">
+            Welcome Admin !
+          </h1>
+          <p>
+            &nbsp;
+          </p>
+        </div>
+        <a class="btn btn-primary" href="deallogin.php?action=logout">
+          Logout »
+        </a>
+      </div>
+      
+      
+      <div class="row">
+        <div class="span4">
+          <span class="label label-info">
+            JAZZ
+          </span>
+          <p></p>
+          <form name="jazz" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput12">
+              Name :
+            </label>
+            <input id="name" name="name" onkeypress="check()">
+          </div>
+          <div class="control-group">
+            <label for="textinput14">
+              URL :
+            </label>
+            <input id="url" name="url" onkeypress="check()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Images :
+            </label>
+            <input id="images" name="images"onkeypress="check()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="singer" name="singer" onkeypress="check()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+                  <textarea id="info" name="info" onkeypress="check()"></textarea>
+          </div>
+          <input id ="jazzb" disabled="disabled" class="btn"type="submit"   value="UPLOAD »" />
+          </form>
+        </div>
+        
+        
+        
+        <div class="span4">
+          <span class="label label-info">
+            POP
+          </span>
+          <p></p>
+          <form name="pop" id="pop" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput16">
+              Name :
+            </label>
+            <input id="pname" name="pname" onkeypress="pcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput17">
+              URL :
+            </label>
+            <input id="purl" name="purl" onkeypress="pcheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput18">
+              Images :
+            </label>
+            <input id="pimages" name="pimages" onkeypress="pcheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="psinger" name="psinger" onkeypress="pcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+            <textarea id="pinfo" name="pinfo" onkeypress="pcheck()"></textarea>
+          </div>
+          <input id="pb" disabled="disabled"  class="btn"type="submit" value="UPLOAD »" />
+          </form>
+        </div>
+        
+        
+        
+        <div class="span4">
+          <span class="label label-info">
+            CLASSIC
+          </span>
+          <p></p>
+          <form name="classic" id="classic" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput15">
+              Name :
+            </label>
+            <input id="cname" name="cname"onkeypress="ccheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput19">
+              URL :
+            </label>
+            <input id="curl" name="curl"onkeypress="ccheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput20">
+              Images :
+            </label>
+            <input id ="cimages" name="cimages" onkeypress="ccheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="csinger" name="csinger" onkeypress="ccheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+                <textarea id="cinfo" name="cinfo" onkeypress="ccheck()"></textarea>
+          </div>
+          <input id ="cb" disabled="disabled" class="btn"type="submit" value="UPLOAD »" />
+          </form>
+        </div>
+      </div>
+      <hr>
+      
+      
+      
+      <div class="row">
+        <div class="span4">
+          <span class="label label-info">
+            ROCK
+          </span>
+          <p></p>
+          <form name="rock" id="rock" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput3">
+              Name :
+            </label>
+              <input id="rname" name="rname" onkeypress="rcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput4">
+              URL :
+            </label>
+            <input id="rurl" name="rurl"onkeypress="rcheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput6">
+              Images :
+            </label>
+            <input id="rimages" name="rimages" onkeypress="rcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="rsinger" name="rsinger" onkeypress="rcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+                  <textarea id="rinfo" name="rinfo" onkeypress="rcheck()"></textarea>
+          </div>
+          <input id ="rb" disabled="disabled" class="btn"type="submit" value="UPLOAD »" />
+          </form>
+        </div>
+        
+        
+        
+        <div class="span4">
+          <span class="label label-info">
+            BLUES
+          </span>
+          <p></p>
+          <form name="blues" id="blues" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput7">
+              Name :
+            </label>
+            <input id="bname" name="bname"onkeypress="bcheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput8">
+              URL :
+            </label>
+            <input id="burl" name="burl" onkeypress="bcheck()" >
+          </div>
+          <div class="control-group">
+            <label for="textinput9">
+              Images :
+            </label>
+            <input id="bimages" name="bimages" onkeypress="bcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="bsinger" name="bsinger" onkeypress="bcheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+                  <textarea id="binfo" name="binfo" onkeypress="bcheck()"></textarea>
+          </div>
+          <input id ="bluesb" disabled="disabled" class="btn"type="submit" value="UPLOAD »" />
+          </form>
+        </div>
+        
+        
+        
+        
+        <div class="span4">
+          <span class="label label-info">
+            Country
+          </span>
+          <p></p>
+          <form name="country" id="country" method="post" action="upload.php">
+          <div class="control-group">
+            <label for="textinput5">
+              Name :
+            </label>
+            <input id="coname"name="coname" onkeypress="cocheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput10">
+              URL :
+            </label>
+            <input id="courl" name="courl" onkeypress="cocheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput11">
+              Images :
+            </label>
+            <input id="coimages"name="coimages" onkeypress="cocheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              Singer :
+            </label>
+            <input id="cosinger" name="cosinger" onkeypress="cocheck()">
+          </div>
+          <div class="control-group">
+            <label for="textinput13">
+              info :
+            </label>
+                  <textarea id="coinfo" name="coinfo" onkeypress="cocheck()"></textarea>
+          </div>
+          <input id ="cob" disabled="disabled"  class="btn"type="submit" value="UPLOAD »" />
+              </form>
+        </div>
+      </div>
+      
+      
+      
+      <hr>
+      <div>
+        © Powered by Wei Zhang
+      </div>
+    </div>
+
+ 
+
+  </body>
+</html>

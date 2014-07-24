@@ -1,0 +1,47 @@
+{%extends "header.twig"%}
+{%block meta%}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="imagetoolbar" content="no" />
+{%endblock meta%}  
+
+{%block css%}  
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/errorbg.gif" />
+  <meta name="robots" content="noindex,nofollow" />
+{%endblock css%}
+  
+{%block title%}  
+  <title>Error information !</title>
+{%endblock title%}
+  {%block style%}
+		<style>
+		body {background: #f9fee8;margin: 0; padding: 20px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#666666;}
+		.error_page {width: 600px; padding: 50px; margin: auto;}
+		.error_page h1 {margin: 20px 0 0;}
+		.error_page p {margin: 10px 0; padding: 0;}		
+		a {color: #9caa6d; text-decoration:none;}
+		a:hover {color: #9caa6d; text-decoration:underline;}
+		</style>
+    {%endblock style%}
+    
+                {%block scripts%}
+  <script type="text/javascript" language="javascript">
+      function reloadyemian(){
+          window.location.href="login.php"; 
+      }
+      window.setTimeout("reloadyemian();",5000);
+  </script>
+{%endblock scripts%}
+
+
+           
+           
+           
+{%block main%}
+  <div class="error_page">
+    <img alt="Kidmondo_face_sad" src="assets/img/errorbg.gif" />
+    <h1>We're sorry...</h1>
+    <p>{{words}}</p>
+    <p><a href="login.php">Return to the login page</a></p>
+  </div>
+{%endblock main%}

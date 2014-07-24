@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        {%block head%}
+        {%endblock head%}
+	<title>The World of {{musickind}}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {%block meta%}
+        {%endblock meta%}
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="assets/css/global.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/color-button.css" />
+	<!-- js Boots_from -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/AJAX.js"></script>
+	<!-- end Boots_from -->
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <![endif]-->
+        <!-- Le fav and touch icons -->
+       <link rel="shortcut icon" href="assets/ico/favicon.ico">
+       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+       <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+       
+     
+       {%block css%}
+       {%endblock css%}
+       {%block style%}
+       {%endblock style%}
+       
+    {% block scripts %}
+    {%endblock scripts %}
+  
+</head>
+{%block headers%}
+{%endblock headers%}
+{% block onload %}
+{# Any javascript you need that MUST run on load. NB you don't need <script></script> tags  here #}
+{% endblock onload %}
+<body data-spy="scroll" data-target=".subnav" data-offset="50" data-twttr-rendered="true" onload="getValue()">
+{% block main %}
+        
+{%endblock main %}
+{%block footer%}
+{%endblock footer%}
+       
+<!-- end footer -->
+</body>
+
+</html>

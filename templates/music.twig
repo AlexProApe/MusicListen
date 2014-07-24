@@ -1,0 +1,242 @@
+{% extends 'footer.twig' %}
+
+{% block scripts %}
+  <script>
+    $(function(){
+    	$("div.holder").jPages({
+        containerID : "itemContainer"
+        });
+      });
+
+	$(function(){
+    	$("div.holder").jPages({
+        containerID : "itemContainer1"
+        });
+      });
+      
+      
+    function checkid(a,d){
+        
+        document.getElementById("changable").value=d;
+        document.getElementById("songchangable").value=a;
+        window.open("listening.php",'Listening', 'height=130, width=440, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no')
+        
+    }
+      
+
+    </script>
+{% endblock scripts %}
+
+{%block main%}
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="#">
+				<span>All About  </span><span class="cl-blue">{{musickind}}</span>
+			</a>
+			<div class="nav-collapse">
+			<ul class="nav pull-right">
+              		<li><a href="index.php">Home</a></li>
+                        <li><a href="jazz.php">Jazz</a></li>
+              		<li><a href="blues.php">Blues</a></li>
+              		<li><a href="classic.php">Clasic</a></li>
+              		<li><a href="contry.php">Country</a></li>
+              		<li><a href="pop.php">Pop</a></li>
+		        <li><a href="rock.php">Rock</a></li>
+			<li class="divider-vertical"></li>
+			<li><a href="login.php">Sign in</a></li>
+
+              	
+
+              	
+            	</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end navbar -->
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="box-wrapper span12">
+				<div class="widget">
+					<div class="wrapper-search">
+						
+						<form name="search" class="form-inline form-search border-rd4" method="post" action="search.php">
+                                                    	<input type="hidden" id="musicsearch" name="musicsearch" value="{{musickind}}">
+							<input id="conditions" name="conditions" placeholder="Type somethings to search .." type="text" class="box-text">
+							<a href="javascript:search.submit();"class="btn-search"></a>
+                                                        
+						</form>
+					</div>
+				</div>
+			</div><!-- end box-wrapper -->
+		</div>
+		<div class="row">
+			<div class="box-wrapper  span12">
+				
+				<div class="row">
+					<div class="title span12">
+						<h3 class="pull-left">Special Recomandation</h3>
+						<div class="sort pull-right dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								Most Viewed
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="icon-tag"></i>By Name</a></li>
+								<li><a href="#"><i class="icon-list"></i>List</a></li>
+								<li><a href="#"><i class="icon-eye-open"></i>View</a></li>
+							</ul>
+						</div>
+					</div><!-- end title -->
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				<input type="hidden" id="changable" value="changeable too">
+                                <input type="hidden" id="songchangable" value="changeable too">
+			
+				<ul id="itemContainer" class="thumbnails thumbnails-horizontal">
+
+                                    
+                                    {%for i in 0..7 %}
+					<li class="span3">
+						<div class="thumbnail border-radius-top">
+							<div class="bg-thumbnail-img">
+                                                     
+								<a  onclick="checkid('{{songname[i]}}','{{musicurl[i]}}')" class="overlay">
+									<img src="assets/img/icons/play.png">
+								</a>
+                                                            <a onclick="checkid('{{songname[i]}}','{{musicurl[i]}}')">
+								<img class="border-radius-top" src="{{picurl[i]}}">
+                                                                </a>
+							</div>
+							<h5><a id="{{musicurl[i]}}" href="{{musicurl[i]}}">{{songname [i]}}</a></h5>
+						</div>
+						<div class="box border-radius-bottom">
+							<p>
+								<span class="title_torrent pull-left pull-left">{{singer[i]}}</span>
+								<span class="number-view pull-right"><i class="icon-white icon-music"></i>MP3</span>
+							</p>
+						</div>
+					</li>
+					
+                                     {%endfor%}   
+                                        
+					
+				</ul>
+				<div class="row">
+					<div class="span12">
+						<div class="navigation pagination pull-right">
+							<ul>
+								<li><a href="#">previous</a></li>
+								<li><a class="active" href="#">1</a></li>
+								<li><a href="#">next</a></li>
+							</ul>
+						</div>
+					</div><!-- end navigation -->
+				</div>				
+			</div>
+			<!-- end  -->
+			<!-- **************** start All Flie  ****************** -->
+			
+			
+			
+			
+			<div class="box-wrapper span10">
+				<div class="row">
+					<div class="title span10">
+						<h3 class="pull-left">Latest Song</h3>
+						<div class="sort pull-right dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								Most Viewed
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="icon-tag"></i>By Name</a></li>
+								<li><a href="#"><i class="icon-list"></i>List</a></li>
+								<li><a href="#"><i class="icon-eye-open"></i>View</a></li>
+							</ul>
+						</div>
+					</div><!-- end title -->
+				</div>
+                                
+                                
+				<ul id="itemContainer1" class="thumbnails thumbnails-vertical">
+                                    {%for i in 0..8%}
+					<li class="span5">
+						<div class="thumbnail border-radius-top">
+							<div class="bg-thumbnail-img">
+								<a  onclick="checkid('{{name[i]}}','{{url[i]}}')" class="overlay">
+									<img src="assets/img/icons/play.png">
+								</a>
+                                                                 <a onclick="checkid('{{name[i]}}','{{url[i]}}')">
+								        <img class="border-radius-top" src="{{pic[i]}}">
+                                                                </a>
+							</div>
+							<div class="thumbnail-content-left">
+								<h5><a href="{{url[i]}}">{{name[i]}}</a></h5>
+								<p>
+									{{info[i]}}
+								</p>
+							</div>
+						</div>
+						<div class="box border-radius-bottom">
+							<p>
+								<span class="title_torrent pull-left">{{ssinger[i]}}</span>
+								<span class="number-view pull-right"><i class="icon-white icon-music"></i>MP3</span>
+							</p>
+						</div>
+					</li>
+					{%endfor%}
+					
+					
+				</ul>
+				<div class="holder pull-right">
+					<div class="span10">
+						<div class="navigation pagination pull-right">
+							<ul>
+								<li><a href="#"><-</a></li>
+								<li><a class="active" href="#">1</a></li>
+								<li><a href="#">-></a></li>
+							</ul>
+						</div>
+					</div><!-- end navigation -->
+				</div>
+			</div><!-- end  -->
+			<div class="row">
+				<div class="list-menu box-wrapper span2">
+					<div class="row">
+						<div class="title bg-title span2">
+							<h3>List menu</h3>
+						</div>
+					</div>
+					<ul class="nav nav-list">
+						<li><a href="index.html"><i class="icon-white icon-home"></i>Home</a></li>
+						<li class="{{blues}}"><a href="blues.php"><i class="icon-white icon-book"></i>Blues</a></li>
+						<li class="{{classical}}"><a href="classic.php"><i class="icon-white icon-book"></i>Classical</a></li>
+						<li class="{{country}}"><a href="contry.php"><i class="icon-white icon-book"></i>Country</a></li>
+						<li class="{{jazz}}"><a href="jazz.php"><i class="icon-white icon-book"></i>Jazz</a></li>
+						<li class="{{pop}}"><a href="pop.php"><i class="icon-white icon-book"></i>Pop</a></li>
+						<li class="{{rock}}"><a href="rock.php"><i class="icon-white icon-book"></i>Rock</a></li>
+
+					</ul>
+				</div>
+			</div><!-- row -->
+			<!-- **************** end All Flie  ****************** -->
+		</div><!-- row -->
+				
+	</div><!-- end container -->
+</div><!-- end main -->
+
+
+{%endblock main%}
+
+

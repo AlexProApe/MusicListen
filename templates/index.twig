@@ -1,0 +1,55 @@
+
+{%extends "header.twig"%}
+{%block meta%}
+        <meta charset="utf-8" />
+{%endblock meta%}
+        
+{%block title%}        
+        <title>All About Music ! </title>
+        
+{%endblock title%}
+        
+{%block css%}        
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rochester|Bree+Serif" />
+
+{%endblock css%}        
+   
+    
+{%block main%}
+
+		<header>
+			<h2>Welcome to</h2>
+			<h1>All About Music</h1>
+		</header>
+		
+        <div id="main">
+        	
+        	<h3>Select Music You Like </h3>
+        	
+        	<a class="arrow prev">Prev</a>
+        	<a class="arrow next">Next</a>
+        	
+        	<ul id="carousel">
+        		<li class="visible"><a href="jazz.php"><img src="assets/img/sites/s1.jpg" alt="RapidXHTML" /></a></li>
+        		<li class="visible"><a href="blues.php"><img src="assets/img/sites/s2.jpg" alt="IM Creator" /></a></li>
+        		<li class="visible"><a href="pop.php"><img src="assets/img/sites/s3.jpg" alt="Email on Acid" /></a></li>
+        		<li><a href="rock.php"><img src="assets/img/sites/s4.jpg" alt="Template SOLD" /></a></li>
+        		<li><a href="contry.php"><img src="assets/img/sites/s5.jpg" alt="Linux Cloud VPS" /></a></li>
+        		<li><a href="classic.php"><img src="assets/img/sites/s6.jpg" alt="Billgrid" /></a></li>
+        	</ul>
+                
+        	
+        </div>
+        
+        <footer>
+	        <h2><i>Powered by:</i> Wei Zhang </h2>
+        </footer>
+        
+        <!-- JavaScript includes - jQuery and my own script.js -->
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="assets/js/script.js"></script>
+        
+{%endblock main%}
